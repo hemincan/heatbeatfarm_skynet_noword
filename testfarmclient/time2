@@ -1,0 +1,17 @@
+root = "./"
+thread = 8
+logger = nil
+logpath = "."
+harbor = 0
+
+start = "client"	-- main script
+bootstrap = "snlua bootstrap"	-- The service for bootstrap
+luaservice = root.."service/?.lua;"..root.."testfarmclient/?.lua;"..root.."?.lua"
+lualoader = root .. "lualib/loader.lua"
+lua_path = root.."lualib/?.lua;"..root.."lualib/?/init.lua;"..root.."testfarmclient/?.lua;"
+lua_cpath = root .. "luaclib/?.so"
+-- preload = "./preload.lua"	-- run preload.lua before every lua service run
+snax = root.."?.lua;"..root.."testfarmclient/?.lua"
+-- snax_interface_g = "snax_g"
+cpath = root.."cservice/?.so"
+-- daemon = "./skynet.pid"
